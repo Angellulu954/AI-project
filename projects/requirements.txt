@@ -1,5 +1,6 @@
 streamlit
 scikit-learn
-pypdf
 numpy
+pypdf
 sentence-transformers==2.2.2
+huggingface-hub==0.16.4
