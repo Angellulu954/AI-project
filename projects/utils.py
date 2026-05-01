@@ -1,8 +1,8 @@
-import PyPDF2
+from pypdf import PdfReader
 import re
 
 def extract_text_from_pdf(file):
-    reader = PyPDF2.PdfReader(file)
+    reader = PdfReader(file)
     text = ""
     for page in reader.pages:
         if page.extract_text():
