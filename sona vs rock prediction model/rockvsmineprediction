@@ -19,7 +19,7 @@ X_train, X_test,Y_train,Y_test=train_test_split(X,Y,train_size=0.2,stratify=Y,ra
 
 model=LogisticRegression()
 model.fit(X_train,Y_train)
-#How does the model split the x and y the same when they were already split how does it know when no reference of the original sonar data is mentioned ?
+
 
 #Model Evaluation
 X_train_prediction=model.predict(X_train)
