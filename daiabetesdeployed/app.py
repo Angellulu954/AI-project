@@ -41,7 +41,7 @@ def load_model_and_scaler():
         st.error(f"Error loading model: {e}")
         return None, None
 # Header
-st.title("🏥 Diabetes Prediction System")
+st.title(" Diabetes Prediction System")
 st.markdown("### AI-Powered Risk Assessment Tool")
 
 # Load model
