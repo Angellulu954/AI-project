@@ -22,16 +22,24 @@ st.markdown("""
 
 
 # Load model and scaler
+import os
+
 @st.cache_resource
 def load_model_and_scaler():
     try:
-        model = joblib.load('diabetes_model.pkl')
-        scaler = joblib.load('scaler_svm.pkl')
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+        model_path = os.path.join(BASE_DIR, "diabetes_model.pkl")
+        scaler_path = os.path.join(BASE_DIR, "scaler_svm.pkl")
+
+        model = joblib.load(model_path)
+        scaler = joblib.load(scaler_path)
+
         return model, scaler
-    except FileNotFoundError:
+
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
         return None, None
-
-
 # Header
 st.title("🏥 Diabetes Prediction System")
 st.markdown("### AI-Powered Risk Assessment Tool")
