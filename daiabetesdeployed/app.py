@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 # Page configuration
 st.set_page_config(
     page_title="Diabetes Prediction",
-    page_icon="🏥",
+    
     layout="wide"
 )
 
@@ -99,7 +99,7 @@ if predict_btn:
     
     # Display results
     st.markdown("---")
-    st.header("🎯 Prediction Results")
+    st.header("Prediction Results")
     
     col1, col2 = st.columns([2, 1])
     
